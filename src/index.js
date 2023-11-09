@@ -1,3 +1,6 @@
+import "./pages/index.css";
+import { initialCards } from "./scripts/cards.js";
+
 // @todo: DOM узлы
 
 let cardList = document.querySelector(".places__list");
