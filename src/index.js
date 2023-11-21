@@ -10,7 +10,7 @@ import {
 const cardList = document.querySelector(".places__list");
 const addBtn = document.querySelector(".profile__add-button");
 const modalNewCard = document.querySelector(".popup_type_new-card");
-const FormNewPlace = document.forms["new-place"];
+const formNewPlace = document.forms["new-place"];
 const editBtn = document.querySelector(".profile__edit-button");
 const nameInput = document.querySelector(".popup__input_type_name");
 const jobInput = document.querySelector(".popup__input_type_description");
@@ -51,16 +51,16 @@ const addFormNewCard = (evt) => {
   evt.preventDefault();
 
   const cardObj = {};
-  cardObj.name = FormNewPlace.elements["place-name"].value;
-  cardObj.link = FormNewPlace.elements["link"].value;
+  cardObj.name = formNewPlace.elements["place-name"].value;
+  cardObj.link = formNewPlace.elements["link"].value;
 
   cardList.prepend(createCard(cardObj, deleteCard, openImg, likeCard));
 
   closeModal(modalNewCard);
-  FormNewPlace.reset();
+  formNewPlace.reset();
 };
 
-FormNewPlace.addEventListener("submit", addFormNewCard);
+formNewPlace.addEventListener("submit", addFormNewCard);
 
 const sendingForm = (evt) => {
   evt.preventDefault();
