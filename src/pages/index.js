@@ -17,7 +17,7 @@ const titleProfile = document.querySelector(".profile__title");
 const descriptionProfile = document.querySelector(".profile__description");
 const editFromModal = document.querySelector(".popup_type_edit");
 const formEditProfile = document.forms["edit-profile"];
-const buttonPopupClose = document.querySelectorAll(".popup__close");
+const buttonsPopupClose = document.querySelectorAll(".popup__close");
 
 const openImg = (link, name) => {
   popupImg.src = link;
@@ -74,7 +74,7 @@ buttonOpenEditFromPopup.addEventListener("click", () => {
   jobInput.value = descriptionProfile.textContent;
 });
 
-buttonPopupClose.forEach((modal) => {
+buttonsPopupClose.forEach((modal) => {
   modal.addEventListener("click", (evt) => {
     const modalIsOpened = evt.target.closest(".popup");
     closeModal(modalIsOpened);
