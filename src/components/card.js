@@ -1,4 +1,4 @@
-import { putaddLike, deleteCardEl, removeLike } from "../components/api.js";
+import { addLike, deleteCardEl, removeLike } from "../components/api.js";
 
 const createCard = (
   cardData,
@@ -61,7 +61,7 @@ const likeCard = (cardElement, userId, cardData) => {
   const likesCounter = cardElement.querySelector(".card__count-like");
 
   if ((owner) => owner._id !== userId) {
-    putaddLike(cardData._id)
+    addLike(cardData._id)
       .then((res) => {
         likeButton.classList.add("card__like-button_is-active");
         likesCounter.textContent = res.likes.length;

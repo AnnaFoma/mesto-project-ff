@@ -94,7 +94,7 @@ const addFormNewCard = (evt) => {
     });
 };
 
-const handleFormSubmit = (evt) => {
+const submitEditProfleForm = (evt) => {
   evt.preventDefault();
 
   renderSaving(true, buttonEditProfile);
@@ -167,6 +167,6 @@ imgProfileAvatar.addEventListener("click", () => {
 
 formNewPlace.addEventListener("submit", addFormNewCard);
 
-formEditProfile.addEventListener("submit", handleFormSubmit);
+formEditProfile.addEventListener("submit", submitEditProfleForm);
 
 formUpdateAvatar.addEventListener("submit", handleFormSubmitAvatar);

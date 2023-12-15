@@ -1,11 +1,11 @@
-const openModal = (el) => {
-  el.classList.add("popup_is-animated", "popup_is-opened");
+const openModal = (popup) => {
+  popup.classList.add("popup_is-animated", "popup_is-opened");
   document.addEventListener("keydown", closeByEsc);
   document.addEventListener("click", closeModalByMouseClick);
 };
 
-const closeModal = (el) => {
-  el.classList.remove("popup_is-opened", "popup_is-animated");
+const closeModal = (popup) => {
+  popup.classList.remove("popup_is-opened", "popup_is-animated");
   document.removeEventListener("keydown", closeByEsc);
   document.removeEventListener("click", closeModalByMouseClick);
 };

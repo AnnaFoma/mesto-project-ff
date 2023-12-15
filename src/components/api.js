@@ -66,7 +66,7 @@ const deleteCardEl = (cardId) => {
   });
 };
 
-const putaddLike = (cardId) => {
+const addLike = (cardId) => {
   return fetch(`${config.baseUrl}/cards/likes/${cardId}`, {
     method: "PUT",
     headers: config.headers,
@@ -101,7 +101,7 @@ export {
   getInitialCards,
   patchEditProfile,
   postAddCardEl,
-  putaddLike,
+  addLike,
   deleteCardEl,
   removeLike,
   updateAvatar,
